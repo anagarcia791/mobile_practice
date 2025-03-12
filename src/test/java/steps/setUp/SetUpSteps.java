@@ -5,8 +5,7 @@ import io.cucumber.java.en.Given;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import org.testng.Assert;
-import pages.LoginPage;
+import pages.ChromePage;
 import runner.TestContext;
 import steps.BaseSteps;
 
@@ -14,7 +13,7 @@ public class SetUpSteps extends BaseSteps {
 
     private static final Logger logger = LoggerFactory.getLogger(SetUpSteps.class);
 
-    LoginPage loginPage = new LoginPage(DriverFactory.getDriver());
+    ChromePage chromePage = new ChromePage(DriverFactory.getDriver());
 
     public SetUpSteps(TestContext testContext) {
         super(testContext);
@@ -22,19 +21,19 @@ public class SetUpSteps extends BaseSteps {
 
     @Given("User unlock the cellphone")
     public void unlocksCellphone() {
-        System.out.println("SET UP STEPS!!");
+        System.out.println("User unlock the cellphone");
     }
 
     @Given("User tap Chrome button")
     public void tapChromeButton() {
         System.out.println("SEGUNDO STEP-------------------------");
-        Assert.assertTrue(loginPage.tapNotifications(), "Dashboard not loaded");
+        chromePage.clickChromeButton();
     }
 
     @Given("otra cosa x")
     public void tapChromeButton2() {
-        System.out.println("SEGUNDO STEP XXXXXX-------------------------");
-        Assert.assertTrue( loginPage.otra(), "XXXX paila");
+        System.out.println("TERCER STEP-------------------------");
+        chromePage.clickChromeButton();
     }
 //
 //    @When("User type {string} in the searcher")

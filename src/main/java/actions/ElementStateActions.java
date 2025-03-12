@@ -34,7 +34,7 @@ public class ElementStateActions {
     public static boolean isElementDisplayed(WebElement element, int timeoutSeconds) {
         boolean displayed;
         try {
-            WaitActions.getWait(Duration.ofSeconds(timeoutSeconds), Duration.ofMillis(250))
+            WaitActions.getWait(Duration.ofSeconds(timeoutSeconds), Duration.ofMillis(DEFAULT_MILLIS))
                     .until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(element)));
             displayed = element.isDisplayed();
         } catch (NullPointerException | WebDriverException e) {

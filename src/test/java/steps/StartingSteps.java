@@ -23,7 +23,6 @@ public class StartingSteps extends BaseSteps {
     private static final AtomicInteger numberOfScenario = new AtomicInteger(0);
     private final ThreadLocal<Integer> scenarios = new ThreadLocal<>();
     private static final String CLASSNAME = StartingSteps.class.getName() + "\t-\t";
-    ChromePage chromePage;
 
     public StartingSteps(TestContext testContext) {
         super(testContext);
@@ -49,21 +48,10 @@ public class StartingSteps extends BaseSteps {
             if (scenarios.get() >= 1) {
                 AppiumDriver appiumDriver = DriverFactory.createDriver(getConfigProperties());
                 setDriver(appiumDriver);
-
-                //this.loginPage = new LoginPage(getDriver());
-
-                //this.chromePage = new ChromePage(getDriver());
                 appiumService = DriverFactory.getAppiumService();
+                System.out.println("termino la creacion del driver");
             } else {
                 System.out.println("tomo otro camino");
-            }
-            try {
-                //boolean x = loginPage.isPasswordDisplayed();
-                //System.out.println("result jojoj -------------------------" + x);
-
-                //chromePage.clickChromeButton();
-            } catch (Exception e) {
-                e.printStackTrace();
             }
         } catch (Exception ex) {
             ex.printStackTrace();

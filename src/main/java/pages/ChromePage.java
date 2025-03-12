@@ -12,7 +12,6 @@ public class ChromePage extends BasePage {
         PageFactory.initElements(getAppiumFieldDecorator(), this);
     }
 
-    //@AndroidFindBy(uiAutomator = "new UiSelector().textContains(\"" + "Chrome" + "\")")
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Chrome\")")
     @iOSXCUITFindBy(id = "Safari")
     private WebElement chromeOption;
