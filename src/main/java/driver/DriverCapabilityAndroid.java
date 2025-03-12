@@ -9,7 +9,7 @@ import static enums.AppiumEnum.APPIUM_CLEAR_DEVICE_LOGS_ON_START;
 /**
  * Contains methods to create capabilities for Android
  */
-public class DriverCapabilityAndroid extends DriverCapability {
+public class DriverCapabilityAndroid implements DriverCapability {
 
     /**
      * @param configProperties ConfigProperties

@@ -52,7 +52,7 @@ public class StartingSteps extends BaseSteps {
 
                 //this.loginPage = new LoginPage(getDriver());
 
-                this.chromePage = new ChromePage(getDriver());
+                //this.chromePage = new ChromePage(getDriver());
                 appiumService = DriverFactory.getAppiumService();
             } else {
                 System.out.println("tomo otro camino");
@@ -61,7 +61,7 @@ public class StartingSteps extends BaseSteps {
                 //boolean x = loginPage.isPasswordDisplayed();
                 //System.out.println("result jojoj -------------------------" + x);
 
-                chromePage.clickChromeButton();
+                //chromePage.clickChromeButton();
             } catch (Exception e) {
                 e.printStackTrace();
             }

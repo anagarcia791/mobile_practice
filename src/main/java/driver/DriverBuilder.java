@@ -12,7 +12,7 @@ import static enums.AppiumEnum.*;
 /**
  * Contains methods to create service and driver for Appium
  */
-public abstract class DriverBuilder {
+public interface DriverBuilder {
     public static final Logger logger = LoggerFactory.getLogger(DriverBuilder.class);
 
     /**
@@ -31,5 +31,5 @@ public abstract class DriverBuilder {
         return builder;
     }
 
-    public abstract AppiumDriver createDriver(AppiumServiceBuilder builder, ConfigProperties configProperties);
+    public AppiumDriver createDriver(AppiumServiceBuilder builder, ConfigProperties configProperties);
 }

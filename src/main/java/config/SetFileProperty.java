@@ -27,6 +27,7 @@ public class SetFileProperty {
         String[] properties = System.getProperty("property").trim().split(",");
         IntStream streamRange = IntStream.range(0, properties.length);
         String property = properties[streamRange.filter(i -> Thread.currentThread().getName().contains(Integer.toString(i))).findFirst().orElse(0)];
+        System.out.println("PROPIEDADES " + property);
         configProperties.set(new ConfigProperties(property));
     }
 }

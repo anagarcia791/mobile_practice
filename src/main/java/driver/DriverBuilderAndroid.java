@@ -8,7 +8,7 @@ import io.appium.java_client.service.local.AppiumServiceBuilder;
 /**
  * Contains method to create driver for Android
  */
-public class DriverBuilderAndroid extends DriverBuilder {
+public class DriverBuilderAndroid implements DriverBuilder {
 
     static DriverCapabilityAndroid driverCapabilityAndroid = new DriverCapabilityAndroid();
 

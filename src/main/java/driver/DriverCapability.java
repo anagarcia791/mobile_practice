@@ -8,7 +8,7 @@ import static enums.AppiumEnum.*;
 /**
  * Contains methods to create capabilities needed for Appium
  */
-public abstract class DriverCapability {
+public interface DriverCapability {
     /**
      * Method which creates the desired capabilities for appium service
      *
@@ -20,5 +20,5 @@ public abstract class DriverCapability {
         return desiredCapabilities;
     }
 
-    public abstract DesiredCapabilities createDiverCapabilities(ConfigProperties configProperties);
+    public DesiredCapabilities createDiverCapabilities(ConfigProperties configProperties);
 }

@@ -8,7 +8,7 @@ import static enums.AppiumEnum.*;
 /**
  * Contains methods to create capabilities for iOS
  */
-public class DriverCapabilityIOS extends DriverCapability {
+public class DriverCapabilityIOS implements DriverCapability {
 
     /**
      * @param configProperties ConfigProperties

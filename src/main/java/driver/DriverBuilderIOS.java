@@ -8,7 +8,7 @@ import io.appium.java_client.service.local.AppiumServiceBuilder;
 /**
  * Contains method to create driver for iOS
  */
-public class DriverBuilderIOS extends DriverBuilder {
+public class DriverBuilderIOS implements DriverBuilder {
 
     static DriverCapabilityIOS driverCapabilityIOS = new DriverCapabilityIOS();
 
